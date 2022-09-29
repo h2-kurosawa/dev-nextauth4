@@ -10,9 +10,11 @@ import styles from '../styles/Home.module.css'
  */
 
 export default function Home() {
+	//session情報を呼び出す
 	const { data: session } = useSession()
 
-	if (session && session.user) {
+	//sessionがあればログイン状態
+	if (session) {
 		return (
 			<>
 				Signed in as {session.user.email}

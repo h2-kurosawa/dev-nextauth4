@@ -23,7 +23,6 @@ export default NextAuth({
 		// session
 		// セッションがチェックされるたびに呼び出されます。デフォルトでは、セキュリティを強化するために、トークンのサブセットのみが返されます。
 		async session({ session, token, user }) {
-			console.log(session, token, user)
 			return session
 		},
 	},
